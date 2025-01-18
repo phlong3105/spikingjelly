@@ -1,0 +1,26 @@
+#
+#     /\_____/\
+#    /  o   o  \
+#   ( ==  ^  == )
+#    )         (
+#   (           )
+#  ( (  )   (  ) )
+# (__(__)___(__)__)
+#
+[tool.poetry]
+name        = "spikingjelly"
+version     = "0.0.0.0.15"
+description = "A deep learning framework for SNNs built on PyTorch."
+license     = "MIT License"
+authors     = [
+    "PKU MLG, PCL, and other contributors",
+]
+packages = [
+    {include="spikingjelly"},
+]
+include  = []
+exclude  = []
+
+[build-system]
+requires      = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
