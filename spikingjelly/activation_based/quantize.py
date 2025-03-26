@@ -183,7 +183,7 @@ class k_bit_quantize_atgf(torch.autograd.Function):
 @torch.jit.ignore
 def k_bit_quantize(x: torch.Tensor, k: int):
     """
-    :param x: a float tensor whose range is ``[0, 1]``.
+    :param x: a float tensor whose range is [0, 1].
     :type x: torch.Tensor
     :param k: the bit number of output
     :type k: int
@@ -192,7 +192,7 @@ def k_bit_quantize(x: torch.Tensor, k: int):
 
     The k-bit quantizer defined in `DoReFa-Net: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients <https://arxiv.org/abs/1606.06160>`_.
 
-    The input whose range is ``[0, 1]`` will be quantized to the nearest ``i / (2 ** k - 1)``, where ``i = 0, 1, ..., (2 ** k - 1)``.
+    The input whose range is [0, 1] will be quantized to the nearest ``i / (2 ** k - 1)``, where ``i = 0, 1, ..., (2 ** k - 1)``.
 
     Note that the gradient is defined by :math:`\\frac{\\partial y}{\\partial x} = 1`.
 
@@ -217,7 +217,7 @@ def k_bit_quantize(x: torch.Tensor, k: int):
 
 def affine_k_bit_quantize(x: torch.Tensor, k: int, w: torch.Tensor, b: torch.Tensor):
     """
-    :param x: a float tensor whose range is ``[0, 1]``.
+    :param x: a float tensor whose range is [0, 1].
     :type x: torch.Tensor
     :param k: the bit number of output
     :type k: int
