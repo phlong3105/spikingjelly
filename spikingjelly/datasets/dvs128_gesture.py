@@ -316,7 +316,7 @@ class DVS128Gesture(sjds.NeuromorphicDatasetFolder):
     @staticmethod
     def get_H_W() -> Tuple:
         '''
-        :return: A tuple ``(H, W)``, where ``H`` is the height of the data and ``W` is the weight of the data.
+        :return: A tuple (H, W), where ``H`` is the height of the data and ``W` is the weight of the data.
             For example, this function returns ``(128, 128)`` for the DVS128 Gesture dataset.
         :rtype: tuple
         '''

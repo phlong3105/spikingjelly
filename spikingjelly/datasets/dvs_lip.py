@@ -65,7 +65,7 @@ class DVSLip(sjds.NeuromorphicDatasetFolder):
     @staticmethod
     def get_H_W() -> Tuple:
         '''
-        :return: A tuple ``(H, W)``, where ``H`` is the height of the data and ``W` is the weight of the data.
+        :return: A tuple (H, W), where ``H`` is the height of the data and ``W` is the weight of the data.
             For example, this function returns ``(128, 128)`` for the DVS128 Gesture dataset.
         :rtype: tuple
         '''
@@ -87,7 +87,3 @@ class DVSLip(sjds.NeuromorphicDatasetFolder):
                     target_file = os.path.join(target_class_dir, fname)
                     # 由于原始数据已经是npy了，故只创建个软连接
                     os.symlink(source_file, target_file)
-
-
-
-
