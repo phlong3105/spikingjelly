@@ -552,7 +552,7 @@ try:
     def check_instance(m, instance):
         if not isinstance(m, instance):
             raise ValueError(
-                f'expected {m} with type {instance}, but got {m} with type {type(m)}!')
+                f'expected {m} with type {instance}, got {m} with type {type(m)}!')
 
 
     def check_no_bias(m):
@@ -897,7 +897,7 @@ try:
         @step_mode.setter
         def step_mode(self, value: str):
             if value not in self.supported_step_mode():
-                raise ValueError(f'step_mode can only be {self.supported_step_mode()}, but got "{value}"!')
+                raise ValueError(f'step_mode can only be {self.supported_step_mode()}, got "{value}"!')
             self._step_mode = value
             if isinstance(self.neuron, base.StepModule):
                 self.neuron.step_mode = value

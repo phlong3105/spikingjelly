@@ -113,7 +113,7 @@ class StepModule:
 
         """
         if value not in self.supported_step_mode():
-            raise ValueError(f'step_mode can only be {self.supported_step_mode()}, but got "{value}"!')
+            raise ValueError(f'step_mode can only be {self.supported_step_mode()}, got "{value}"!')
         self._step_mode = value
 
 class SingleModule(StepModule):
@@ -445,7 +445,3 @@ class MemoryModule(nn.Module, StepModule):
         replica = super()._replicate_for_data_parallel()
         replica._memories = self._memories.copy()
         return replica
-
-
-
-
